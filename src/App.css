@@ -6,9 +6,41 @@
   height: 90px;
   background-image:url("./Header bg.png");
   background-size: cover;
+  text-align: center;
   padding: 6px;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+#search {
+    text-align: center;
+    padding: 20px;
+    padding-left: 0px;
+    min-width: 100%;
+    display: inline-block;
+    align-items: flex-start;
+}
+
+#search input {
+  padding-left: 3px;
+  font-size: 20px;
+  width: 85%;
+  height: 43px;
+}
+
+#search button {
+  margin-left: 10px;
+  width: 45px;
+  height: 49px;
+  padding-top: 8px;
+  background-color: #28BF54;
+  border: #28BF54;
+  border-radius: 5px;
+}
+
+.searchIcon {
+  transform: scaleX(-1);
+  color: white;
 }

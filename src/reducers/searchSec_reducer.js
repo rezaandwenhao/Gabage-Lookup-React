@@ -1,8 +1,6 @@
 import { KEYWORD_CHANGED, SEARCH_REQUESTED } from '../actions/types';
 import data from '../data.json';
 
-//Read data_json and find items that have a keyword matching action.keyword
-
 const INITIAL_STATE = {
     keyword: '',
     results: []
@@ -14,13 +12,10 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, keyword: action.payload };
         case SEARCH_REQUESTED:
             let results = [];
-            data.forEach((item) => {
-                if (item.title.toLowerCase().includes(state.keyword.toLowerCase())) {
-                    results.push(item);
-                } else if (item.keywords.toLowerCase().includes(state.keyword.toLowerCase())) {
-                    results.push(item);
-                }
-            })
+            let keyword = state.keyword.toLowerCase();
+            results = data.filter((item) => 
+                item.title.toLowerCase().includes(keyword) 
+                || item.keywords.toLowerCase().includes(keyword))
             return { ...state, results: results };
         default:
             return state;

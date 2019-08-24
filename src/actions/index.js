@@ -1,4 +1,4 @@
-import { KEYWORD_CHANGED, SEARCH_REQUESTED } from './types';
+import { KEYWORD_CHANGED, SEARCH_REQUESTED, FAVOURITE_TOGGLED } from './types';
 
 export const keywordChanged = (text) => {
 	return {
@@ -12,4 +12,11 @@ export const searchRequested = (text) => {
 		type: SEARCH_REQUESTED,
 		payload: text,
 	};
+};
+
+export const toggleFavorite = (item) => {
+    return {
+        type: FAVOURITE_TOGGLED,
+        payload: item,
+    };
 };

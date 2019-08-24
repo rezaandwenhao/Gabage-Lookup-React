@@ -17,16 +17,17 @@
 #search {
     text-align: center;
     padding: 20px;
-    padding-left: 0px;
+    padding-left: 13px;
+    padding-bottom: 0px;
     min-width: 100%;
     display: inline-block;
-    align-items: flex-start;
+    text-align: start;
 }
 
 #search input {
   padding-left: 3px;
   font-size: 20px;
-  width: 85%;
+  width: 90%;
   height: 43px;
 }
 
@@ -40,7 +41,60 @@
   border-radius: 5px;
 }
 
+@media only screen and (max-width: 750px) {
+  #search input {
+      width: 83%;
+  }
+  #search button {
+      width: 45px;
+  }
+}
+
 .searchIcon {
   transform: scaleX(-1);
   color: white;
 }
+
+.item {
+  margin-left: 10px;
+  padding: 10px;
+  padding-bottom: 0px;
+  padding-top: 5px;
+  width: 98%;
+  display: inline-block;
+}
+
+.item-title {
+  display: inline-block;
+  width: 50%;
+  text-align: start;
+  vertical-align: top;
+  padding-top: 15px;
+}
+
+.item-detail {
+  display: inline-block;
+  width: 50%;
+  text-align: start;
+}
+
+.allItems {
+  margin-bottom: 200px;
+}
+
+#Favourites_text {
+  text-align: start;
+  color: #289C68;
+  padding-left: 23px;
+}
+
+.footer {
+  height:25%; 
+  width: 100%;
+  background-color: #E8FAED;
+  overflow-y: scroll;
+  background-position: 0% 0%;
+  position: fixed;
+  bottom: 0pt;
+  left: 0pt;
+}  

@@ -14,18 +14,18 @@ class SearchSec extends Component {
   render() {
     return (
       <div>
-      <Form id="search">
-        <FormControl 
-          type="text" 
-          placeholder="Search..." 
-          onChange={event => this.props.keywordChanged(event.target.value)}/>
+        <Form id="search">
+          <FormControl
+            type="text"
+            placeholder="Search..."
+            onChange={event => this.props.keywordChanged(event.target.value)} />
 
-        <Button type="submit" onClick={event => this.search(event)}>
-          <FaSearch className="searchIcon" />
-        </Button>
-      </Form>
+          <Button type="submit" onClick={event => this.search(event)}>
+            <FaSearch className="searchIcon" />
+          </Button>
+        </Form>
 
-      <ResultItem />
+        <ResultItem />
       </div>
     );
   }

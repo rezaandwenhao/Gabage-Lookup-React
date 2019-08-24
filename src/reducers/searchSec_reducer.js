@@ -9,7 +9,11 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
     switch(action.type) {
         case KEYWORD_CHANGED:
-            return { ...state, keyword: action.payload };
+            var res = state.results;
+            if (action.payload === '') {
+                res = [];
+            }
+            return { keyword: action.payload, results: res };
         case SEARCH_REQUESTED:
             let results = [];
             let keyword = state.keyword.toLowerCase();
